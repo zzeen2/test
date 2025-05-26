@@ -5,9 +5,6 @@ require('./models/config')
 const express = require("express");
 const app = express();
 const path = require("path");
-const LoginRouter = require('./routers/login.router')
-const MainRouter = require('./routers/main.router')
-const cookieParser = require('cookie-parser');
 
 
 app.set ("view engine", "ejs");
@@ -26,8 +23,6 @@ app.use('/test',(req,res) => {
   // HTTP 302 Found (임시 리다이렉트) 응답으로 리다이렉트 URL을 보냅니다.
   res.redirect(appRedirectUrl);
 })
-app.use('/login', LoginRouter);
-app.use('/main',  MainRouter)
 
 app.listen(4000, (req,res)=> {
     console.log("server on")
