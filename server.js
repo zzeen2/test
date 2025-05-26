@@ -1,7 +1,6 @@
 // npm i express ejs mysql2 jsonwebtoken dotenv bcrypt multer
 require('dotenv').config();
 const cors = require('cors')
-require('./models/config')
 const express = require("express");
 const app = express();
 const path = require("path");
