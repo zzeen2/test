@@ -19,9 +19,9 @@ app.use(cookieParser());
 app.use('/test',(req,res) => {
   console.log("123")
   const appRedirectUrl = `moodcloudapp://login?success=true&redirectTo=Main`;
-  res.json({name : 123});
+
   // HTTP 302 Found (임시 리다이렉트) 응답으로 리다이렉트 URL을 보냅니다.
-  // res.redirect(appRedirectUrl);
+  res.redirect(appRedirectUrl);
 })
 
 app.listen(4000, (req,res)=> {
